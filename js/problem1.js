@@ -26,9 +26,20 @@ function changeElementText(element, answer) {
 
 function kiteGame(numberOfKites) {
     changeElementText("#numberOfKites", numberOfKites);
+
     var answer = "";
 
-    // write some code here!
+    count = 1;
 
+    while(count <= numberOfKites){
+        if(count%3 == 0){
+            answer += "Peche! "
+        }else if(count%5 == 0){
+            answer += "Ipo kaate! "
+        }else{
+            answer += count.toString()+" "
+        }
+        count++;
+    }
     changeElementText("#answer", answer);
 }

@@ -28,16 +28,16 @@ function kiteGame(numberOfKites) {
     changeElementText("#numberOfKites", numberOfKites);
 
     var answer = "";
-
-    count = 1;
-
+    var count = 1;
     while(count <= numberOfKites){
-        if(count%3 == 0){
-            answer += "Peche! "
+        if((count%3 == 0) && (count%5 == 0)){
+            answer += "Peche! Ipo kaate! ";
+        }else if(count%3 == 0){
+            answer += "Peche! ";
         }else if(count%5 == 0){
-            answer += "Ipo kaate! "
+            answer += "Ipo kaate! ";
         }else{
-            answer += count.toString()+" "
+            answer += count.toString()+" ";
         }
         count++;
     }

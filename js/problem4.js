@@ -29,15 +29,15 @@ function changeElementText(element, sum) {
     $(element).text(sum);
 }
 
-function countCash(distanceTraveled, timeWaiting, isNight) {
+function countCash() {
     var notes = [5,10,20,50,100,500,1000];
     var sum = 0;
-    changeElementText("#cash", sum)
+    changeElementText("#denominations", [].slice.apply(arguments));
     for (var i = 0; i < arguments.length; i++) {
         if(notes.indexOf(arguments[i])==-1){
            break;
         }
         sum += arguments[i];
     }
-    changeElementText("#cash", sum);
+    changeElementText("#countedCash", sum);
 }

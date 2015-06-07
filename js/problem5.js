@@ -33,15 +33,21 @@
      count: 7
  */
 
-// Write your JavaScript here
+function changeElementText(element, fixedAdvert) {
+    $(element).text(sum);
+}
 
 function reverseLines(advertisement) {
     var urduLinesIndex = 1;
+    changeElementText("#oldAdvertisement",advertisement);
     var urduWordsNumber = advertisement[urduLinesIndex].length;
-    for (var i = 0; i < urduWordsNumber/2 ; i++) {
+    var half = urduWordsNumber/2;
+
+    for(var i = 0; i < half; i++) {
         var temp = "";
         temp = advertisement[urduLinesIndex][i];
         advertisement[urduLinesIndex][i] = advertisement[urduLinesIndex][urduWordsNumber-1-i];
         advertisement[urduLinesIndex][urduWordsNumber-1-i] = temp;
     }
+    changeElementText("#newAdvertisement",2);
 }

@@ -25,5 +25,19 @@
  Then my total is Rs 100
 
 */
+function changeElementText(element, sum) {
+    $(element).text(sum);
+}
 
-// Write your JavaScript here
+function countCash(distanceTraveled, timeWaiting, isNight) {
+    var notes = [5,10,20,50,100,500,1000];
+    var sum = 0;
+    changeElementText("#cash", sum)
+    for (var i = 0; i < arguments.length; i++) {
+        if(notes.indexOf(arguments[i])==-1){
+           break;
+        }
+        sum += arguments[i];
+    }
+    changeElementText("#cash", sum);
+}

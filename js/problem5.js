@@ -34,3 +34,14 @@
  */
 
 // Write your JavaScript here
+
+function reverseLines(advertisement) {
+    var urduLinesIndex = 1;
+    var urduWordsNumber = advertisement[urduLinesIndex].length;
+    for (var i = 0; i < urduWordsNumber/2 ; i++) {
+        var temp = "";
+        temp = advertisement[urduLinesIndex][i];
+        advertisement[urduLinesIndex][i] = advertisement[urduLinesIndex][urduWordsNumber-1-i];
+        advertisement[urduLinesIndex][urduWordsNumber-1-i] = temp;
+    }
+}
